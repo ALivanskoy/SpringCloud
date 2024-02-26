@@ -1,0 +1,23 @@
+eureka:
+  client:
+    defaultZone: http://lockalhost:8761/eureka
+  instance:
+    preferIpAddress: true
+
+spring:
+  application:
+    name: UserService
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/MyDB?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
+    username: user
+    password: user
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+    show-sql: true
